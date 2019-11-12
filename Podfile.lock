@@ -1,0 +1,24 @@
+PODS:
+  - Alamofire (4.0.1)
+  - JSONModel (1.8.0)
+  - YYModel (1.0.4)
+
+DEPENDENCIES:
+  - Alamofire (~> 4.0.0)
+  - JSONModel (~> 1.8.0)
+  - YYModel (~> 1.0.4)
+
+SPEC REPOS:
+  https://github.com/CocoaPods/Specs.git:
+    - Alamofire
+    - JSONModel
+    - YYModel
+
+SPEC CHECKSUMS:
+  Alamofire: 7682d43245de14874acd142ec137b144aa1dd335
+  JSONModel: 02ab723958366a3fd27da57ea2af2113658762e9
+  YYModel: 2a7fdd96aaa4b86a824e26d0c517de8928c04b30
+
+PODFILE CHECKSUM: 5ad1d6467987e46dab48e6d1970a2f85bbc47145
+
+COCOAPODS: 1.8.0.beta.2

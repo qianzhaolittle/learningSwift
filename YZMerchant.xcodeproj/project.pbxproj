@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -13,6 +13,10 @@
 		04FE139C2373B27600EB95A8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 04FE139B2373B27600EB95A8 /* Assets.xcassets */; };
 		04FE139F2373B27600EB95A8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04FE139D2373B27600EB95A8 /* LaunchScreen.storyboard */; };
 		04FE13AA2373B27700EB95A8 /* YZMerchantTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04FE13A92373B27700EB95A8 /* YZMerchantTests.swift */; };
+		04FE13B82373B38200EB95A8 /* YZMCustomViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04FE13B72373B38200EB95A8 /* YZMCustomViewController.swift */; };
+		04FE13BA2373B3AA00EB95A8 /* YZMCustomTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04FE13B92373B3AA00EB95A8 /* YZMCustomTabBarViewController.swift */; };
+		04FE13BC2374115300EB95A8 /* yzmModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04FE13BB2374115300EB95A8 /* yzmModel.swift */; };
+		72D2677ECBB352145F686187 /* Pods_YZMerchant.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 44D77C0F2D5A0EC52C924F3C /* Pods_YZMerchant.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +40,12 @@
 		04FE13A52373B27700EB95A8 /* YZMerchantTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = YZMerchantTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		04FE13A92373B27700EB95A8 /* YZMerchantTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YZMerchantTests.swift; sourceTree = "<group>"; };
 		04FE13AB2373B27700EB95A8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		04FE13B72373B38200EB95A8 /* YZMCustomViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YZMCustomViewController.swift; sourceTree = "<group>"; };
+		04FE13B92373B3AA00EB95A8 /* YZMCustomTabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YZMCustomTabBarViewController.swift; sourceTree = "<group>"; };
+		04FE13BB2374115300EB95A8 /* yzmModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = yzmModel.swift; sourceTree = "<group>"; };
+		260DE0BFD0CA34C1713C2A1B /* Pods-YZMerchant.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YZMerchant.debug.xcconfig"; path = "Target Support Files/Pods-YZMerchant/Pods-YZMerchant.debug.xcconfig"; sourceTree = "<group>"; };
+		44D77C0F2D5A0EC52C924F3C /* Pods_YZMerchant.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_YZMerchant.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		84B17EDDFFC2356267183619 /* Pods-YZMerchant.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YZMerchant.release.xcconfig"; path = "Target Support Files/Pods-YZMerchant/Pods-YZMerchant.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,6 +53,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				72D2677ECBB352145F686187 /* Pods_YZMerchant.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -62,6 +73,8 @@
 				04FE13932373B27400EB95A8 /* YZMerchant */,
 				04FE13A82373B27700EB95A8 /* YZMerchantTests */,
 				04FE13922373B27400EB95A8 /* Products */,
+				592FA7C2CC836F9215777DA3 /* Pods */,
+				7669368CB2EF646CB480BBD8 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -77,7 +90,8 @@
 		04FE13932373B27400EB95A8 /* YZMerchant */ = {
 			isa = PBXGroup;
 			children = (
-				04FE13942373B27400EB95A8 /* AppDelegate.swift */,
+				04FE13B52373B32200EB95A8 /* CustomUITabbarController */,
+				04FE13B42373B2AB00EB95A8 /* delegate */,
 				04FE13962373B27400EB95A8 /* ViewController.swift */,
 				04FE13982373B27400EB95A8 /* Main.storyboard */,
 				04FE139B2373B27600EB95A8 /* Assets.xcassets */,
@@ -96,6 +110,49 @@
 			path = YZMerchantTests;
 			sourceTree = "<group>";
 		};
+		04FE13B42373B2AB00EB95A8 /* delegate */ = {
+			isa = PBXGroup;
+			children = (
+				04FE13942373B27400EB95A8 /* AppDelegate.swift */,
+			);
+			path = delegate;
+			sourceTree = "<group>";
+		};
+		04FE13B52373B32200EB95A8 /* CustomUITabbarController */ = {
+			isa = PBXGroup;
+			children = (
+				04FE13B62373B32200EB95A8 /* controller */,
+			);
+			path = CustomUITabbarController;
+			sourceTree = "<group>";
+		};
+		04FE13B62373B32200EB95A8 /* controller */ = {
+			isa = PBXGroup;
+			children = (
+				04FE13B72373B38200EB95A8 /* YZMCustomViewController.swift */,
+				04FE13B92373B3AA00EB95A8 /* YZMCustomTabBarViewController.swift */,
+				04FE13BB2374115300EB95A8 /* yzmModel.swift */,
+			);
+			path = controller;
+			sourceTree = "<group>";
+		};
+		592FA7C2CC836F9215777DA3 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				260DE0BFD0CA34C1713C2A1B /* Pods-YZMerchant.debug.xcconfig */,
+				84B17EDDFFC2356267183619 /* Pods-YZMerchant.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		7669368CB2EF646CB480BBD8 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				44D77C0F2D5A0EC52C924F3C /* Pods_YZMerchant.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -103,9 +160,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 04FE13AE2373B27700EB95A8 /* Build configuration list for PBXNativeTarget "YZMerchant" */;
 			buildPhases = (
+				821B3161B3A0C272ABD8F8AC /* [CP] Check Pods Manifest.lock */,
 				04FE138D2373B27400EB95A8 /* Sources */,
 				04FE138E2373B27400EB95A8 /* Frameworks */,
 				04FE138F2373B27400EB95A8 /* Resources */,
+				8B955CB71657315D1D62B1C5 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -192,13 +251,58 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		821B3161B3A0C272ABD8F8AC /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-YZMerchant-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8B955CB71657315D1D62B1C5 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-YZMerchant/Pods-YZMerchant-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-YZMerchant/Pods-YZMerchant-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-YZMerchant/Pods-YZMerchant-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		04FE138D2373B27400EB95A8 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				04FE13BA2373B3AA00EB95A8 /* YZMCustomTabBarViewController.swift in Sources */,
+				04FE13BC2374115300EB95A8 /* yzmModel.swift in Sources */,
 				04FE13972373B27400EB95A8 /* ViewController.swift in Sources */,
 				04FE13952373B27400EB95A8 /* AppDelegate.swift in Sources */,
+				04FE13B82373B38200EB95A8 /* YZMCustomViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -358,11 +462,13 @@
 		};
 		04FE13AF2373B27700EB95A8 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 260DE0BFD0CA34C1713C2A1B /* Pods-YZMerchant.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 3M96SGDAK3;
 				INFOPLIST_FILE = YZMerchant/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -370,17 +476,19 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.queen.YZMerchant;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
 		04FE13B02373B27700EB95A8 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 84B17EDDFFC2356267183619 /* Pods-YZMerchant.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 3M96SGDAK3;
 				INFOPLIST_FILE = YZMerchant/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -388,7 +496,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.queen.YZMerchant;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
