@@ -18,7 +18,9 @@ class ViewController: UIViewController {
 //        self.collectionType();
 //        self.controlFlow();
 //        self.learningFunction(status: "begin");
-        self.closures();
+//        self.closures();
+//        self.properties();
+        
         
         
     }
@@ -726,6 +728,85 @@ class ViewController: UIViewController {
         }
     }
     
-   
+    //MARK: - 属性 (Properties)
+    func properties() -> Void {
+        
+        //lazy 延迟存储属性
+        //延迟存储属性是指当第一次被调用的时候才会计算其初始值的属性。在属性声明前使用 lazy 来标示一个延迟存储属性  使用 var 关键字
+        //注意 如果一个被标记为 lazy 的属性在没有初始化时就同时被多个线程访问，则无法保证该属性只会被初始化一次。
+        let manager = DataManager()
+        manager.data.append("Some data")
+        manager.data.append("Some more data")
+        //当需要用到lazy修饰的属性时候再调用
+        print(manager.importer.fileName);
+        
+        //注意
+        //全局的常量或变量都是延迟计算的，跟延迟存储属性相似，不同的地方在于，全局的常量或变量不需要标记lazy修饰符。局部范围的常量或变量从不延迟计算
+    }
+    
+    class DataImporter {
+        
+        var fileName = "data.text";
+    }
+    
+    class DataManager {
+        
+        lazy var importer = DataImporter();
+        var data:[String] = [];
+    }
+    
+    //MARK: - 方法（Methods）
+    func methods() -> Void {
+        
+        //结构体和枚举能够定义方法是 Swift 与 C/Objective-C 的主要区别之一。在 Objective-C 中，类是唯一能定义方法的类型。但在 Swift 中，你不仅能选择是否要定义一个类/结构体/枚举，还能灵活地在你创建的类型（类/结构体/枚举）上定义方法。
+        
+        //self 属性
+        //类型的每一个实例都有一个隐含属性叫做self，
+        
+        //在实例方法中修改值类型 结构体和枚举是值类型。默认情况下，值类型的属性不能在它的实例方法中被修改。
+        //要使用可变方法，将关键字mutating 放到方法的func关键字之前就可以了：
+        var somePoint = Point(x: 1.0, y: 2.0);
+        //只能用变量不用用let
+        somePoint.moveByX(xx: 4.0, yy: 5.0);
+        print("somePoint == \(somePoint)");
+        
+        //在可变方法中给 self 赋值
+        //调用这个版本的方法和调用上个版本的最终结果是一样的。
+        
+        //类型方法(类方法)
+        SomeClass01.classMethods()
+    }
+    
+    struct Point {
+        var x = 0.0, y = 0.0
+        mutating func moveByX(xx:Double, yy:Double) {
+            
+            x += xx;
+            y += yy;
+        }
+        
+    }
+    
+    //在可变方法中给 self 赋值
+    struct PointSelf {
+        var x = 0.0, y = 0.0
+        mutating func moveByX(xx:Double, yy:Double) {
+            
+            self = PointSelf (x: x + xx, y: y + yy);
+        }
+    }
+    
+     //类型方法(类方法)
+    class SomeClass01 {
+        
+        class func classMethods() -> Void {
+            print("classMethods")
+        }
+    }
+    
+    //MARK: - 析构过程
+    func deinitProcess() -> Void {
+        
+    }
     
 }
